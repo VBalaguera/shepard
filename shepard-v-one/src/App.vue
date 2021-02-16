@@ -2,22 +2,26 @@
   <div id="app">
       <header id='app-header'>
         <img id="app-logo" src="./assets/logo.png" alt="shepard"/>
-        <h1 id="#app-title">Shepard</h1>
+        <h1 id="app-title">Shepard</h1>
         
       </header>
+      <WeatherApp />
       <MathQuiz />
       <Game />
+
   </div>
 </template>
 
 <script>
 import MathQuiz from './components/MathQuiz'; 
 import Game from './components/Game'; 
+import WeatherApp from './components/WeatherApp'; 
 export default {
   name: "App",
   components: {
   MathQuiz,
-  Game
+  Game,
+  WeatherApp
 }
 }
 
@@ -29,7 +33,7 @@ export default {
   margin: 0; 
 }
 #app-logo {
-  height: 3vh;  
+  height: 5vh;  
 }
 #app-header {
     background-color: #282c34;
@@ -42,12 +46,7 @@ export default {
 
 #app-title {
   font-weight: 400; 
+  font-size: 1.5rem; 
 }
 </style>
 
-<!-- 
-colors: 
-
-#ff4162; 
-
--->
