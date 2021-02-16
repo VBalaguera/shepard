@@ -14,7 +14,7 @@
 import MathQuiz from './components/MathQuiz'; 
 import Game from './components/Game'; 
 export default {
-  name: "app",
+  name: "App",
   components: {
   MathQuiz,
   Game
