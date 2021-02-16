@@ -9,67 +9,8 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>Venom Snek wants his revenge!</h1>
-      <h4>A game base on change and luck, sometimes skill</h4>
-    </header>
-    <div id="game">
-      <section id="demon" class="container">
-        <h2>The Whole World's Health</h2>
-        <div class="healthbar">
-          <div class="healthbar__value" :style="demonBarStyles"></div>
-        </div>
-      </section>
-      <section id="player" class="container">
-        <h2>Snek</h2>
-        <div class="healthbar">
-          <div class="healthbar__value" :style="playerBarStyles"></div>
-        </div>
-      </section>
-      <section id="controls" v-if="!winner">
-        <button @click="attackDemon">ATTACK</button>
-        <button :disabled="mayUseSpecialAttack" @click="specialAttackDemon">
-          SPECIAL ATTACK
-        </button>
-        <button @click="healingPlayer">HEAL</button>
-        <button @click="surrender">SURRENDER</button>
-      </section>
-      <section className="container" v-if="winner">
-        <h2>Game Over</h2>
-        <div v-if="winner === 'demon'">
-          <h3>You lost</h3>
-          <h1>Such a lust for revenge</h1>
-          <h1>WHOOOOOOOOOOOOOOOOOOOO?</h1>
-        </div>
-        <h3 v-else-if="winner === 'player'">You win</h3>
-        <h3 v-else>Draw</h3>
-        <button @click="restartGame">Play again?</button>
-      </section>
-      <section id="log" class="container">
-        <h2>Battle Log</h2>
-        <ul>
-          <li v-for="logMessage in logMessages">
-            <span :class="{'log--player': logMessage.actionBy === 'player', 'log--demon': logMessage.actionBy === 'demon'}"
-            >
-              {{ logMessage.actionBy === 'player' ? 'Snek' : 'Cypher'}}
-            </span>
-            <span v-if="logMessage.actionType === 'heal'">
-              heals himself for
-              <span class="log--heal">{{ logMessage.actionValue }}</span>
-            </span>
-            <span v-else>
-              attacks and deals
-              <span class="log--damage"> {{ logMessage.actionValue }}</span>
-            </span>
-          </li>
-        </ul>
-      </section>
-      <section id="theory" class="container">
-        <p>
-          The objective of this small game is to implement and understand the main core principles of Vue: data(), methods(), computed properties and watchers. Along with all the possibilities regarding dynamic css classes, conditionally rendering content, etc. 
-          All the contents in this have been possible thanks to this <a href="https://www.udemy.com/course/vuejs-2-the-complete-guide/" target="_blank" >great course</a>. 
-        </p>
-      </section>
-    </div>
+    <section id="App">
+      
+    </section>
   </body>
 </html>
