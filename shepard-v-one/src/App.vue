@@ -1,60 +1,47 @@
 <template>
-  <div id="quiz-app">
-    <h1 className="title">Math quiz app</h1>
-    <OperatorQuiz @onBack="onBack" v-if="operator" :operator="operator" />
-    <OperatorSelector v-if="!operator" @changeOperator="changeOperator" />
+  <div id="app">
+      <header id='app-header'>
+        <img id="app-logo" src="./assets/logo.png" alt="shepard"/>
+        <h1 id="#app-title">Shepard</h1>
+        
+      </header>
+      <MathQuiz />
+      <Game />
   </div>
 </template>
 
 <script>
-import OperatorSelector from "./components/OperatorSelector";
-import OperatorQuiz from "./components/OperatorQuiz";
+import MathQuiz from './components/MathQuiz'; 
+import Game from './components/Game'; 
 export default {
   name: "App",
-  data() {
-    return {
-      operator: null,
-    };
-  },
-  methods: {
-    changeOperator(operator) {
-      this.operator = operator;
-    },
-    onBack(){
-      this.operator = null; 
-    }
-  },
   components: {
-    OperatorSelector,
-    OperatorQuiz,
-  },
-};
+  MathQuiz,
+  Game
+}
+}
+
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
-#quiz-app {
-  font-family: 'Fira Code', monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  font-size: 1.5rem;
+* {
+  padding: 0;
+  margin: 0; 
 }
-
-button {
-  padding: 1rem;
-  background-color: #ff6726;
-  color: white;
-  font-size: 1rem;
-  box-shadow: none;
-  margin: 0 1rem;
+#app-logo {
+  height: 3vh;  
 }
-
-#button-container {
+#app-header {
+    background-color: #282c34;
+  min-height: 6vh;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  color: #41B883;
+}
+
+#app-title {
+  font-weight: 400; 
 }
 </style>
 
