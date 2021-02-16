@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <h1>Venom Snek wants his revenge!</h1>
+      <h1>Venom Snek wants his revenge</h1>
       <h4>A game base on change and luck, sometimes skill</h4>
     </header>
     <div id="game">
