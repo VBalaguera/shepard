@@ -5,7 +5,7 @@
         <h1 id="#app-title">Shepard</h1>
         
       </header>
-      <MathQuiz /> 
+      <MathQuiz />  
       <Game />
   </div>
 </template>
